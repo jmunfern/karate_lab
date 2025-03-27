@@ -1,0 +1,18 @@
+{
+  "id": "#(codigo)",
+  "category": {
+    "id": 1,
+    "name": "#(categoria)"
+  },
+  "name": "#(nombre)",
+  "photoUrls": [
+    "string"
+  ],
+  "tags": [
+    {
+      "id": 0,
+      "name": "string"
+    }
+  ],
+  "status": "available"
+}
