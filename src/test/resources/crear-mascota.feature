@@ -1,14 +1,14 @@
-Feature: Creación de Mascota usando Karate
+Feature: Creación y actualización de Mascota usando Karate
   Background:
     * configure ssl = true
     * def NombreAleatorio = Java.type('NombreAleatorio')
     * def nombreAleatorio = NombreAleatorio.obtenerNombreAleatorio()
     * def body = read('classpath:body.json')
 
-  Scenario Outline: Creación de Mascota mediante POST
+  Scenario: Creación de Mascota mediante POST
     * def requestBody = body
-    * set requestBody.id = <codigo>
-    * set requestBody.category.name = <categoria>
+    * set requestBody.id = 000000123
+    * set requestBody.category.name = "perros"
     * set requestBody.name = nombreAleatorio
     Given url "https://petstore.swagger.io/v2"
     And path "/pet"
@@ -16,9 +16,6 @@ Feature: Creación de Mascota usando Karate
     Then method post
     And status 200
     And match $.name == nombreAleatorio
-    Examples:
-      |codigo     | categoria |
-      |000000123  | "perros"  |
 
   Scenario: Actualizar la mascota creada mediante PUT
     * def requestBody = body

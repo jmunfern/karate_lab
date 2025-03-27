@@ -1,10 +1,10 @@
 {
-  "id": "#(codigo)",
+  "id": 0,
   "category": {
-    "id": 1,
-    "name": "#(categoria)"
+    "id": 0,
+    "name": ""
   },
-  "name": "#(nombre)",
+  "name": "",
   "photoUrls": [
     "string"
   ],
